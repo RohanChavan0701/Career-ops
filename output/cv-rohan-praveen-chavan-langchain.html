@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Praveen Chavan — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+    padding: 0.6in;
+    margin: 0;
+  }
+  .page { width: 100%; max-width: 8.5in; margin: 0 auto; padding: 2px 0; }
+  .header { margin-bottom: 20px; }
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
+  }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #555;
+  }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+  .section { margin-bottom: 16px; }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .summary-text { font-size: 11px; line-height: 1.7; color: #2f2f2f; }
+  a { white-space: nowrap; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+  .job { margin-bottom: 14px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.6; color: #333; margin-bottom: 4px; }
+  .job li strong { font-weight: 600; }
+  .project { margin-bottom: 12px; }
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+  .project-badge {
+    font-size: 9px;
+    font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.55; }
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 3px; }
+  .edu-item { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+  .edu-desc { font-size: 10px; color: #666; margin-top: 2px; line-height: 1.5; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .skill-item { font-size: 10.5px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 0; }
+  }
+  .avoid-break, .job, .project, .edu-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Rohan Praveen Chavan</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>+1-540-824-9961</span>
+      <span class="separator">|</span>
+      <span>rohanchavan0701@gmail.com</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/rohanpraveenchavan">linkedin.com/in/rohanpraveenchavan</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/RohanChavan0701">github.com/RohanChavan0701</a>
+      <span class="separator">|</span>
+      <a href="https://rohanchavan.vercel.app">rohanchavan.vercel.app</a>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">ML engineer specializing in agentic systems, LLM evaluation frameworks, and production AI deployments. Built a production RAG pipeline with LangChain, Llama 3.3 70B, and ChromaDB serving real housing policy researchers - citation grounding score 1.0, 86 automated tests. Fine-tuned LLMs using SFT and DPO on 117K examples, outperforming Claude-3.7 Sonnet on adversarial safety benchmarks (1st place, Amazon Nova Trusted AI Challenge). Shipped LunaFlow, a fullstack agentic assistant with LangChain-orchestrated tool-calling across multiple external APIs, live at lunaflow.work. Deep expertise in the LangChain/LangGraph ecosystem: retrieval pipelines, agent orchestration, inference API selection, and evaluation-driven iteration.</div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Agentic Systems &amp; LangGraph Orchestration</span>
+      <span class="competency-tag">LLM Evaluation &amp; Monitoring Frameworks</span>
+      <span class="competency-tag">RAG Pipeline Design</span>
+      <span class="competency-tag">Tool-Calling &amp; Multi-Agent Systems</span>
+      <span class="competency-tag">LLM Fine-Tuning (SFT/DPO)</span>
+      <span class="competency-tag">Python &amp; TypeScript (Full-Stack)</span>
+      <span class="competency-tag">Production LLM Deployment</span>
+      <span class="competency-tag">Inference API Optimization</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Virginia Center for Housing Research (VCHR), Virginia Tech</span>
+        <span class="job-period">Apr 2026 - Present</span>
+      </div>
+      <div class="job-role">Graduate Research Assistant &mdash; Blacksburg, VA</div>
+      <ul>
+        <li>Engineered production RAG pipeline with <strong>LangChain, Llama 3.3 70B, and ChromaDB</strong> - self-healing fallback (Together AI primary, Groq secondary), two-pass retrieval with 5-tier geographic/income routing, scaling to 6,809 indexed document chunks powering policy decisions for real housing researchers.</li>
+        <li>Built <strong>86-test evaluation framework</strong> covering corpus ingestion, retrieval accuracy, and citation grounding - achieved citation grounding score of 1.0 across all validation targets; evaluation system caught retrieval regressions before production deployment across 4 Virginia localities.</li>
+        <li>Integrated HUD, BLS, and Census BPS federal APIs with automated startup validation and graceful degradation; identified and replaced unreliable data source, improving pipeline reliability for production deployment.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Virginia Tech (Team HokieTokie)</span>
+        <span class="job-period">Jan 2025 - Jun 2025</span>
+      </div>
+      <div class="job-role">Software Engineer - Amazon Nova Trusted AI Challenge &mdash; Blacksburg, VA</div>
+      <ul>
+        <li>Fine-tuned LLMs using <strong>SFT and DPO on 117K synthetic training examples</strong>, reducing adversarial attack success rate by 46% and outperforming Claude-3.7 Sonnet and CodeLlama-70B on safety benchmarks - 1st place (Tournament 2) among 10 global teams.</li>
+        <li>Engineered <strong>adversarial evaluation system</strong> with taxonomy-guided prompt construction and automated quality scoring across vulnerability detection and content filtering; enabled reproducible model experimentation, regression detection, and evaluation-driven iteration at scale.</li>
+        <li>Optimized inference latency through model fusion and quantization; deployed dual-expert architecture with sequential filtering and reusable components for production LLM security.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">AutoUnify</span>
+        <span class="job-period">May 2025 - Aug 2025</span>
+      </div>
+      <div class="job-role">Software Engineering Intern (AI/ML) &mdash; San Francisco, CA</div>
+      <ul>
+        <li>Designed and deployed <strong>production ML scoring microservice</strong> (FastAPI, PostgreSQL, Vertex AI) providing real-time observability across multiple live LLM endpoints in a distributed multi-service architecture serving an 8-person engineering team.</li>
+        <li>Automated CI/CD pipeline with pytest suites and JSON Schema validation across agentic workflows; built <strong>reusable prompt engineering components</strong> reducing manual LLM tuning effort by 25%.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Colgate-Palmolive Global Business Services</span>
+        <span class="job-period">Jan 2024 - Jun 2024</span>
+      </div>
+      <div class="job-role">Process Automation Engineer Intern &mdash; Mumbai, India</div>
+      <ul>
+        <li>Deployed 3 production FastAPI applications serving 400+ employees with 70% automation rate (200+ hours/month saved); reduced response latency from 30s to under 10s via Redis caching and async I/O handling 1K+ daily interactions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <span class="project-title">LunaFlow</span>
+      <span class="project-badge">Live: lunaflow.work</span>
+      <div class="project-desc">Shipped fullstack agentic product to real users - React/TypeScript/Node.js/PostgreSQL stack with <strong>LangChain-orchestrated AI assistant</strong> featuring tool-calling across Google Calendar, Google Tasks, and ElevenLabs APIs. Built agent orchestration layer with context window management, explicit tool-calling contracts, automated failure recovery, and OAuth 2.0 authentication end-to-end.</div>
+      <div class="project-tech">React, TypeScript, Node.js, FastAPI, LangChain, PostgreSQL, Docker, OAuth 2.0</div>
+    </div>
+
+    <div class="project">
+      <span class="project-title">CareRoute</span>
+      <span class="project-badge">Codefest 2025 - 4th/60 teams</span>
+      <div class="project-desc">Built and deployed <strong>multi-agent healthcare coordination system in 36 hours</strong> - Agent-to-Agent (A2A) protocol for autonomous task delegation across 6 microservices with domain-specific tool invocation, explicit inter-agent contracts, and graceful failure recovery. Deployed to AWS EC2 under competition constraints.</div>
+      <div class="project-tech">FastAPI, PostgreSQL, Docker, AWS EC2, A2A Protocol, JSON-RPC 2.0</div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">M.S. Computer Engineering, GPA: 3.71/4.0 &mdash; <span class="edu-org">Virginia Tech</span></span>
+        <span class="edu-year">Aug 2024 - May 2026</span>
+      </div>
+      <div class="edu-desc">Coursework: Advanced Machine Learning, Trustworthy ML, Computer Vision, Applications of ML, IoT System Design</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">B.Tech Information Technology, Distinction, Honors in AI &mdash; <span class="edu-org">K.J. Somaiya College of Engineering</span></span>
+        <span class="edu-year">Aug 2020 - May 2024</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="section avoid-break">
+    <div class="section-title">Achievements</div>
+    <div class="skills-grid">
+      <span class="skill-item"><span class="skill-category">Amazon Nova Trusted AI:</span> Selected as 1 of 10 global teams; 1st place (Tournament 2), 2nd place (Tournament 1)</span>
+      <span class="skill-item"><span class="skill-category">Codefest 2025:</span> 4th Place + Honorable Mention among 60 teams</span>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <span class="skill-item"><span class="skill-category">Languages:</span> Python, TypeScript, JavaScript, Java, SQL, C++</span>
+      <span class="skill-item"><span class="skill-category">AI/ML:</span> LangChain, LangGraph, LLMs, embeddings, RAG pipelines, agentic systems, tool-calling, LLM fine-tuning (SFT, DPO), Hugging Face Transformers, evaluation frameworks</span>
+      <span class="skill-item"><span class="skill-category">ML Engineering:</span> retrieval, monitoring, model integration, latency/cost optimization, prompt engineering, Llama 3.3 70B, inference API orchestration, experimentation</span>
+      <span class="skill-item"><span class="skill-category">Backend &amp; Frontend:</span> FastAPI, Node.js, React, RESTful APIs, microservices, WebSockets, CI/CD, Docker</span>
+      <span class="skill-item"><span class="skill-category">Cloud &amp; Data:</span> AWS (EC2, Lambda, S3, Bedrock), PostgreSQL, ChromaDB, pgvector, Redis, Kubernetes</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

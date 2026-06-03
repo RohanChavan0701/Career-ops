@@ -1,0 +1,182 @@
+%-------------------------
+% Resume: Rohan Praveen Chavan
+% Tailored for: Modal -- Forward Deployed Engineer - ML
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{times}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2.5pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Rohan Praveen Chavan} \\ \vspace{2pt}
+    \small +1-540-824-9961 $|$
+    \href{mailto:rohanchavan0701@gmail.com}{\underline{rohanchavan0701@gmail.com}} $|$
+    \href{https://linkedin.com/in/rohanpraveenchavan}{\underline{linkedin.com/in/rohanpraveenchavan}} $|$
+    \href{https://github.com/RohanChavan0701}{\underline{github.com/RohanChavan0701}} $|$
+    \href{https://rohanchavan.vercel.app}{\underline{rohanchavan.vercel.app}}
+\end{center}
+
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Virginia Tech}{Blacksburg, VA}
+      {M.S. in Computer Engineering, GPA: 3.71/4.0}{Aug 2024 -- May 2026}
+      \resumeItemListStart
+        \resumeItem{Coursework: Advanced Machine Learning, Trustworthy ML, Computer Vision, Apps of ML, IoT System Design}
+      \resumeItemListEnd
+    \resumeSubheading
+      {K.J. Somaiya College of Engineering}{Mumbai, India}
+      {B.Tech in Information Technology, Distinction, Honors in AI}{Aug 2020 -- May 2024}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, TypeScript, JavaScript, Java, SQL, C++} \\
+     \textbf{AI/ML}{: LLMs, LLM fine-tuning (SFT, DPO), post-training workflows, embeddings,
+       RAG pipelines, agentic systems, tool-calling, Hugging Face Transformers, LangChain, LangGraph} \\
+     \textbf{ML Engineering}{: inference optimization, model serving, retrieval, evaluation frameworks,
+       latency/cost optimization, prompt engineering, Llama 3.3 70B, orchestration, experimentation} \\
+     \textbf{Backend \& Frontend}{: FastAPI, Node.js, React, RESTful APIs, microservices,
+       WebSockets, CI/CD, Docker} \\
+     \textbf{Cloud \& Data}{: AWS (EC2, Lambda, S3, Bedrock), PostgreSQL, ChromaDB, pgvector, Redis, Kubernetes}
+    }}
+\end{itemize}
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer -- Amazon Nova Trusted AI Challenge}{Jan 2025 -- Jun 2025}
+      {Virginia Tech (Team HokieTokie)}{Blacksburg, VA}
+      \resumeItemListStart
+        \resumeItem{Owned full \textbf{post-training pipeline}: synthetic data generation, SFT and DPO
+          fine-tuning on \textbf{117K training examples}, benchmark evaluation -- reducing adversarial
+          attack success rate by \textbf{46\%} and outperforming Claude-3.7 Sonnet and CodeLlama-70B
+          on safety benchmarks, securing \textbf{1st place (Tournament 2)} among 10 global teams.}
+        \resumeItem{Engineered adversarial evaluation system with taxonomy-guided prompt construction
+          and automated quality scoring, enabling reproducible model experimentation and regression
+          detection across tournament iterations at scale.}
+        \resumeItem{Optimized inference latency and cost through \textbf{model fusion and quantization},
+          deploying dual-expert architecture with sequential filtering and reusable components for
+          production LLM security.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Graduate Research Assistant}{Apr 2026 -- Present}
+      {Virginia Center for Housing Research (VCHR), Virginia Tech}{Blacksburg, VA}
+      \resumeItemListStart
+        \resumeItem{Engineered end-to-end production \textbf{ML deployment on inference API}: Llama 3.3 70B
+          with self-healing fallback (Together AI primary, Groq secondary), LangChain, ChromaDB,
+          two-pass retrieval and 5-tier routing -- scaling to \textbf{6,809 indexed document chunks}
+          serving real housing policy users.}
+        \resumeItem{Built \textbf{86-test evaluation framework} covering corpus ingestion, retrieval
+          accuracy, and citation grounding -- achieved \textbf{citation grounding score of 1.0} across
+          all validation targets; automated regression detection across 4 Virginia localities.}
+        \resumeItem{Integrated HUD, BLS, and Census BPS federal APIs with automated startup validation
+          and graceful degradation; identified and replaced unreliable data source, improving pipeline
+          reliability for production deployment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern (AI/ML)}{May 2025 -- Aug 2025}
+      {AutoUnify}{San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{Designed and deployed production ML scoring microservice (FastAPI, PostgreSQL, Vertex AI)
+          providing real-time observability across multiple live LLM endpoints in a distributed
+          multi-service architecture; automated CI/CD reducing manual LLM tuning effort by \textbf{25\%}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Process Automation Engineer Intern}{Jan 2024 -- Jun 2024}
+      {Colgate-Palmolive Global Business Services}{Mumbai, India}
+      \resumeItemListStart
+        \resumeItem{Deployed 3 production FastAPI applications serving \textbf{400+ employees} with
+          \textbf{70\% automation rate} (200+ hours/month saved); reduced latency from 30s to under 10s
+          via Redis caching and async I/O handling 1K+ daily interactions.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{LunaFlow} $|$ \emph{React, TypeScript, Node.js, FastAPI, LangChain, PostgreSQL, Docker, OAuth 2.0} $|$
+        \href{https://github.com/RohanChavan0701}{\underline{GitHub}}}{2025}
+      \resumeItemListStart
+        \resumeItem{Shipped full-stack product to real users at \href{https://lunaflow.work}{\underline{lunaflow.work}} --
+          LangChain-orchestrated AI assistant with tool-calling across Google Calendar, Google Tasks, and
+          ElevenLabs APIs; handling context management, OAuth 2.0 authentication, and automated failure
+          recovery end-to-end.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{CareRoute} $|$ \emph{FastAPI, PostgreSQL, Docker, AWS EC2, A2A Protocol, JSON-RPC 2.0} $|$
+        \href{https://github.com/RohanChavan0701/CareRoute}{\underline{GitHub}}}{2025}
+      \resumeItemListStart
+        \resumeItem{Built and deployed multi-agent healthcare coordination system in \textbf{36 hours}
+          (Codefest 2025, \textbf{4th Place / 60 teams}) -- demonstrated ability to architect, build,
+          and deploy complex ML systems under tight delivery constraints.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Amazon Nova Trusted AI}{: Selected as 1 of 10 global teams; 1st place (Tournament 2), 2nd place (Tournament 1)} \\
+     \textbf{Codefest 2025}{: 4th Place + Honorable Mention among 50+ teams}
+    }}
+\end{itemize}
+
+\end{document}
